@@ -4,7 +4,9 @@ const checkForName = (inputText) => {
 
   if (names.includes(inputText)) {
     alert('Welcome, Captain!');
+    return 1;
   }
+  return 0;
 };
 
 export { checkForName };
