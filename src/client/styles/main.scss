@@ -1,0 +1,22 @@
+$ap_color: #005e51;
+
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;
+
+    #name {
+        margin-bottom: 15px;
+    }
+
+    #submitButton {
+        background-color: $ap_color;
+        background-image: linear-gradient(-45deg, #008171, $ap_color);
+        color: #fff;
+        margin-bottom: 15px;
+    }
+}
