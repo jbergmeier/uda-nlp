@@ -2,4 +2,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px 40px;
+
+    .logo {
+        margin: 15px;
+
+        img {
+            max-width: 250px;
+            margin: 20px;
+        }
+    }
 }

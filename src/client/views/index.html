@@ -9,18 +9,15 @@
     <body>
       <div class="container">
       <header>
-          <div class="">
-              Logo
-          </div>
-          <div class="">
-              navigation
+          <div class="logo">
+              <img id="img_logo" src="http://www.logologo.com/logos/globe-compass-logo.jpg" alt="Company Logo" />
           </div>
       </header>
 
       <main>
           <section>
               <form class="" onsubmit="return Client.handleSubmit(event)">
-                  <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name"><br/>
+                  <input id="name" type="text" name="input" value="" placeholder="Name"><br/>
                   <input type="submit" name="" id="submitButton" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
               </form>
           <section>
@@ -32,9 +29,18 @@
       </main>
 
       <footer>
-          <p>This is a footer</p>
+          <p>&copy; 2020 - Joern Bergmeier</p>
       </footer>
     </div>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+  </script>
   </body>
   </body>
 </html>
