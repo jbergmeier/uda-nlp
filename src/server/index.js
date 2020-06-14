@@ -36,7 +36,7 @@ app.post('/test', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  respo.sendFile('dist/index.html');
+  res.sendFile('dist/index.html');
 });
 
 app.listen(port, async () => {
