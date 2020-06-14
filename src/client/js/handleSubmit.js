@@ -17,12 +17,13 @@ const handleSubmit = (event) => {
   })
     .then((res) => res.json())
     .then(function (res) {
-      document.getElementById('results').innerHTML =
-        'Language: ' +
-        res.result.lang +
-        '<br/>' +
-        'Confidence: ' +
-        res.result.confidence;
+      const resultsArea = document.getElementById('results');
+
+      resultsArea.appendChild(document.createElement('p')).innerHTML =
+        'Language: ' + res.result.lang;
+
+      resultsArea.appendChild(document.createElement('p')).innerHTML =
+        'Confidence: ' + res.result.confidence;
     });
 };
 

@@ -1,12 +1,14 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const AYLIENTextAPI = require('aylien_textapi');
 require('dotenv').config();
 
+const app = express();
 const port = process.env.PORT || 1337;
 
 app.use(express.json());
 app.use(express.static('dist'));
+app.use(cors());
 
 //NPL
 
